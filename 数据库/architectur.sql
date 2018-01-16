@@ -1,68 +1,77 @@
+/*数据库操作：创建数据库*/
+create database banksql
+
+/*数据库操作：删除数据库*/
+drop database banksql
+
+/*数据库操作：打开数据库*/
+use banksql
+
+
 CREATE SCHEMA architectur;
 
 CREATE TABLE `architectur`.`component` (
-  `bigComponent_id` INT(12) NOT NULL COMMENT '元器件ID',
-  `bigComponent_name` VARCHAR(64) NOT NULL COMMENT '权限名称',
-  `bigComponent_type` VARCHAR(64) NOT NULL COMMENT '元器件种类',
-  `remark` VARCHAR(128) NULL COMMENT '备注信息',
-  PRIMARY KEY (`bigComponent_id`));
+`big_component_id` INT(12) NOT NULL COMMENT '元器件ID',
+`big_component_name` VARCHAR(64) NOT NULL COMMENT '权限名称',
+`big_component_type` VARCHAR(64) NOT NULL COMMENT '元器件种类',
+`remark` VARCHAR(128) NULL COMMENT '备注信息',
+PRIMARY KEY (`big_component_id`));
 
   
+CREATE TABLE `architectur`.`component_branch` (
+`com_branch_id` INT(12) NOT NULL COMMENT '元器件ID',
+`com_branch_name` VARCHAR(128) NOT NULL COMMENT '权限名字',
+`com_branch_type` VARCHAR(64) NOT NULL COMMENT '元器件种类',
+`big_component_type` VARCHAR(64) NOT NULL COMMENT '元器大类',
+`remark` VARCHAR(256) NULL,
+PRIMARY KEY (`com_branch_id`));
   
-  CREATE TABLE `architectur`.`component_branch` (
-  `comBranch_id` INT(12) NOT NULL COMMENT '元器件ID',
-  `comBranch_name` VARCHAR(128) NOT NULL COMMENT '权限名字',
-  `comBranch_type` VARCHAR(64) NOT NULL COMMENT '元器件种类',
-  `bigComponent_type` VARCHAR(64) NOT NULL COMMENT '元器大类',
-  `remark` VARCHAR(256) NULL,
-  PRIMARY KEY (`comBranch_id`));
-  
-  CREATE TABLE `architectur`.`new_component` (
-  `component_id` VARCHAR(32) NOT NULL,
-  `component_name` VARCHAR(64) NULL COMMENT '物料名称',
-  `component_bType` VARCHAR(64) NOT NULL COMMENT '元器件大种类',
-  `component_sType` VARCHAR(64) NOT NULL COMMENT '元器件大种类之子类',
-  `component_status` VARCHAR(64)  NULL COMMENT '物料状态',
-  `spec_model` VARCHAR(64) NOT NULL COMMENT '规格型号',
-  `briefexplanation` VARCHAR(64) NULL COMMENT '简要说明信息',
-  `funct` VARCHAR(64) NULL COMMENT '功能',
-  `pack` VARCHAR(64) NULL COMMENT '封装',
-  `manufacturer` VARCHAR(64) NOT NULL COMMENT '生产厂家',
-  `component_data` VARCHAR(64) NULL COMMENT '器件资料',
-  `remark` VARCHAR(128) NULL COMMENT '备注',
-  PRIMARY KEY (`component_id`));
+CREATE TABLE `architectur`.`new_component` (
+`component_id` VARCHAR(32) NOT NULL,
+`component_name` VARCHAR(64) NULL COMMENT '物料名称',
+`component_bType` VARCHAR(64) NOT NULL COMMENT '元器件大种类',
+`component_sType` VARCHAR(64) NOT NULL COMMENT '元器件大种类之子类',
+`component_status` VARCHAR(64)  NULL COMMENT '物料状态',
+`spec_model` VARCHAR(64) NOT NULL COMMENT '规格型号',
+`briefexplanation` VARCHAR(64) NULL COMMENT '简要说明信息',
+`funct` VARCHAR(64) NULL COMMENT '功能',
+`pack` VARCHAR(64) NULL COMMENT '封装',
+`manufacturer` VARCHAR(64) NOT NULL COMMENT '生产厂家',
+`component_data` VARCHAR(64) NULL COMMENT '器件资料',
+`remark` VARCHAR(128) NULL COMMENT '备注',
+PRIMARY KEY (`component_id`));
 
   
-  CREATE TABLE `architectur`.`old_component` (
-  `oldComponent_id` VARCHAR(32) NOT NULL COMMENT '元器件编码',
-  `oldComponent_name` VARCHAR(64) NOT NULL COMMENT '物料名称',
-  `oldComponent_bType` VARCHAR(64)  NULL COMMENT '元器件大种类',
-  `oldComponent_sType` VARCHAR(64)  NULL COMMENT '元器件大种类之子类',
-  `oldComponent_status` VARCHAR(64) NOT NULL COMMENT '物料状态',
-  `oldSpec_model` VARCHAR(64) NULL COMMENT '规格型号',
-  `oldBrief_explana` VARCHAR(64) NULL COMMENT '简要说明信息',
-  `old_funct` VARCHAR(64) NULL COMMENT '功能',
-  `old_package` VARCHAR(64) NOT NULL COMMENT '封装',
-  `old_manufact` VARCHAR(64) NULL COMMENT '生产厂家',
-  `oldComponent_data` VARCHAR(64) NULL COMMENT '器件资料',
-  `remark` VARCHAR(128) NULL,
-  PRIMARY KEY (`oldComponent_id`))
+CREATE TABLE `architectur`.`old_component` (
+`old_omponent_id` VARCHAR(32) NOT NULL COMMENT '元器件编码',
+`old_component_name` VARCHAR(64) NOT NULL COMMENT '物料名称',
+`old_component_bType` VARCHAR(64)  NULL COMMENT '元器件大种类',
+`old_component_sType` VARCHAR(64)  NULL COMMENT '元器件大种类之子类',
+`old_component_status` VARCHAR(64) NOT NULL COMMENT '物料状态',
+`oldSpec_model` VARCHAR(64) NULL COMMENT '规格型号',
+`oldBrief_explana` VARCHAR(64) NULL COMMENT '简要说明信息',
+`old_funct` VARCHAR(64) NULL COMMENT '功能',
+`old_package` VARCHAR(64) NOT NULL COMMENT '封装',
+`old_manufact` VARCHAR(64) NULL COMMENT '生产厂家',
+`oldComponent_data` VARCHAR(64) NULL COMMENT '器件资料',
+`remark` VARCHAR(128) NULL,
+PRIMARY KEY (`old_component_id`))
+
 ENGINE = InnoDB;
 
-
 CREATE TABLE `architectur`.`user` (
-  `user_id` INT(11) NOT NULL AUTO_INCREMENT,
-  `user_name` VARCHAR(45) NULL,
-  `user_role` INT(11) NULL,
-  `remark` VARCHAR(64) NULL,
-  PRIMARY KEY (`user_id`));
+`user_id` INT(11) NOT NULL AUTO_INCREMENT,
+`user_name` VARCHAR(45) NULL,
+`user_role` INT(11) NULL,
+`remark` VARCHAR(64) NULL,
+PRIMARY KEY (`user_id`));
 
   
-  CREATE TABLE `architectur`.`sequence` (
-  `name` VARCHAR(32) NOT NULL,
-  `current_value` INT(11) NOT NULL,
-  `increment` INT(11) NOT NULL,
-  PRIMARY KEY (`name`));
+CREATE TABLE `architectur`.`sequence` (
+`name` VARCHAR(32) NOT NULL,
+`current_value` INT(11) NOT NULL,
+`increment` INT(11) NOT NULL,
+PRIMARY KEY (`name`));
 
   
 USE `architectur`;
@@ -70,14 +79,14 @@ DROP function IF EXISTS `setval`;
 
 DELIMITER $$
 USE `architectur`$$
-CREATE DEFINER=`root`@`localhost` FUNCTION `setval`(seq_name VARCHAR(50), value INTEGER) RETURNS int(11)
+CREATE DEFINER =`root`@`localhost` FUNCTION `setval`(seq_name VARCHAR(50), value INTEGER) RETURNS int(11)
     DETERMINISTIC
 BEGIN
     UPDATE sequence
     SET current_value = value
     WHERE name = seq_name;
     RETURN currval(seq_name);
-  END$$
+END$$
 
 DELIMITER ;
 
@@ -94,7 +103,7 @@ BEGIN
     SET current_value = current_value + increment
     WHERE name = seq_name;
     RETURN currval(seq_name);
-  END$$
+END$$
 
 DELIMITER ;
 
@@ -113,7 +122,7 @@ BEGIN
     FROM sequence
     WHERE name = seq_name;
     RETURN value;
-  END$$
+END$$
 
 DELIMITER ;
 
