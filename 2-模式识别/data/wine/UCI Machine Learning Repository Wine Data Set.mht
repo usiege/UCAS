@@ -1,0 +1,1818 @@
+From: <ÓÉ Microsoft Internet Explorer 5 ±£´æ>
+Subject: UCI Machine Learning Repository: Wine Data Set
+Date: Sat, 20 Nov 2010 16:44:05 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0007_01CB88D2.24CFF7F0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5931
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0007_01CB88D2.24CFF7F0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://archive.ics.uci.edu/ml/datasets/Wine
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>UCI Machine Learning Repository: Wine Data =
+Set</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dutf-8"><!-- Stylesheet link --><LINK=20
+href=3D"http://archive.ics.uci.edu/ml/assets/ml.css" type=3Dtext/css =
+rel=3Dstylesheet>
+<SCRIPT language=3DJavaScript type=3Dtext/javascript>=0A=
+<!--=0A=
+function checkform ( form )=0A=
+{=0A=
+  // see http://www.thesitewizard.com/archive/validation.shtml=0A=
+  // for an explanation of this script and how to use it on your=0A=
+  // own website=0A=
+=0A=
+  // ** START **=0A=
+  if (form.q.value =3D=3D "")=0A=
+  {=0A=
+    alert( "Please enter search terms." );=0A=
+    form.q.focus();=0A=
+    return false ;=0A=
+  }=0A=
+=0A=
+  if (getCheckedValue(form.sitesearch) =3D=3D "ics.uci.edu" && =
+form.q.value.indexOf("site:archive.ics.uci.edu/ml") =3D=3D -1)=0A=
+  {=0A=
+    form.q.value =3D form.q.value + " site:archive.ics.uci.edu/ml";=0A=
+  }=0A=
+=0A=
+  // ** END **=0A=
+  return true ;=0A=
+}=0A=
+=0A=
+// return the value of the radio button that is checked=0A=
+// return an empty string if none are checked, or=0A=
+// there are no radio buttons=0A=
+function getCheckedValue(radioObj) {=0A=
+	if(!radioObj)=0A=
+		return "";=0A=
+	var radioLength =3D radioObj.length;=0A=
+	if(radioLength =3D=3D undefined)=0A=
+		if(radioObj.checked)=0A=
+			return radioObj.value;=0A=
+		else=0A=
+			return "";=0A=
+	for(var i =3D 0; i < radioLength; i++) {=0A=
+		if(radioObj[i].checked) {=0A=
+			return radioObj[i].value;=0A=
+		}=0A=
+	}=0A=
+	return "";=0A=
+}=0A=
+//-->=0A=
+</SCRIPT>
+
+<META content=3D"MSHTML 6.00.2900.6003" name=3DGENERATOR></HEAD>
+<BODY><!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+<TABLE width=3D"100%" bgColor=3D#003366>
+  <TBODY>
+  <TR>
+    <TD><SPAN class=3Dnormal><A =
+href=3D"http://archive.ics.uci.edu/ml/index.html"=20
+      alt=3D"Home"><IMG =
+src=3D"http://archive.ics.uci.edu/ml/assets/logo.gif"=20
+      =
+border=3D0></IMG></A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;<A=20
+      href=3D"http://cml.ics.uci.edu/"><FONT color=3D#ffdd33>Center for =
+Machine=20
+      Learning and Intelligent Systems</FONT></A></SPAN> </TD>
+    <TD vAlign=3Dtop align=3Dright width=3D"100%"><SPAN =
+class=3Dwhitetext><A=20
+      href=3D"http://archive.ics.uci.edu/ml/about.html">About</A>&nbsp; =
+<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/citation_policy.html">Citation=20
+      Policy</A>&nbsp; <A=20
+      href=3D"http://archive.ics.uci.edu/ml/donation_policy.html">Donate =
+a Data=20
+      Set</A>&nbsp; <A=20
+      href=3D"http://archive.ics.uci.edu/ml/contact.html">Contact</A>=20
+      </SPAN><BR><BR><!-- Search Google -->
+      <FORM onsubmit=3D"return checkform(this);"=20
+      action=3Dhttp://www.google.com/custom method=3Dget><INPUT =
+maxLength=3D255=20
+      size=3D30 name=3Dq> <INPUT type=3Dsubmit value=3DSearch name=3Dsa> =
+<INPUT=20
+      type=3Dhidden=20
+      =
+value=3DAH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:=
+384;AWFID:869c0b2eaa8d518e;=20
+      name=3Dcof> <INPUT type=3Dhidden value=3Dics.uci.edu =
+name=3Ddomains> <BR><INPUT=20
+      type=3Dradio CHECKED value=3Dics.uci.edu name=3Dsitesearch> <SPAN=20
+      class=3Dwhitetext><FONT size=3D1>Repository</FONT></SPAN> <INPUT =
+type=3Dradio=20
+      value=3D"" name=3Dsitesearch> <SPAN class=3Dwhitetext><FONT=20
+      size=3D1>Web</FONT></SPAN>=20
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A=20
+      href=3D"http://www.google.com/search"><IMG height=3D27 =
+alt=3DGoogle=20
+      src=3D"http://www.google.com/logos/Logo_25blk.gif" align=3Dmiddle=20
+      border=3D0></A> <BR></FORM><!-- Search Google --><SPAN =
+class=3Dwhitetext><A=20
+      href=3D"http://archive.ics.uci.edu/ml/datasets.html"><FONT =
+color=3D#ffdd33=20
+      size=3D3><B>View ALL Data Sets</B></FONT></A></SPAN>=20
+<BR></TD></TR></TBODY></TABLE><BR>
+<TABLE cellPadding=3D2 width=3D"100%" border=3D0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE>
+        <TBODY>
+        <TR>
+          <TD vAlign=3Dtop>
+            <P><SPAN class=3Dheading><B>Wine Data Set</B></SPAN> =
+<BR><SPAN=20
+            class=3Dnormal><I><FONT size=3D4>Download</FONT></I>: <A=20
+            =
+href=3D"http://archive.ics.uci.edu/ml/machine-learning-databases/wine/"><=
+FONT=20
+            style=3D"BACKGROUND-COLOR: #ffffaa" size=3D4>Data =
+Folder</FONT></A>, <A=20
+            =
+href=3D"http://archive.ics.uci.edu/ml/machine-learning-databases/wine/win=
+e.names"><FONT=20
+            style=3D"BACKGROUND-COLOR: #ffffaa" size=3D4>Data Set=20
+            Description</FONT></A></SPAN></P>
+            <P class=3Dnormal><B>Abstract</B>: Using chemical analysis =
+determine=20
+            the origin of wines</P></TD>
+          <TD><IMG hspace=3D20=20
+            =
+src=3D"http://archive.ics.uci.edu/ml/assets/MLimages/Large109.jpg"=20
+            vspace=3D10> </TD></TR></TBODY></TABLE>
+      <TABLE cellPadding=3D6 border=3D1>
+        <TBODY>
+        <TR>
+          <TD bgColor=3D#ddeeff>
+            <P class=3Dnormal><B>Data Set =
+Characteristics:&nbsp;&nbsp;</B></P></TD>
+          <TD>
+            <P class=3Dnormal>Multivariate</P></TD>
+          <TD bgColor=3D#ddeeff>
+            <P class=3Dnormal><B>Number of Instances:</B></P></TD>
+          <TD>
+            <P class=3Dnormal>178</P></TD>
+          <TD bgColor=3D#ddeeff>
+            <P class=3Dnormal><B>Area:</B></P></TD>
+          <TD>
+            <P class=3Dnormal>Physical</P></TD></TR>
+        <TR>
+          <TD bgColor=3D#ddeeff>
+            <P class=3Dnormal><B>Attribute Characteristics:</B></P></TD>
+          <TD>
+            <P class=3Dnormal>Integer, Real</P></TD>
+          <TD bgColor=3D#ddeeff>
+            <P class=3Dnormal><B>Number of Attributes:</B></P></TD>
+          <TD>
+            <P class=3Dnormal>13</P></TD>
+          <TD bgColor=3D#ddeeff>
+            <P class=3Dnormal><B>Date Donated</B></P></TD>
+          <TD>
+            <P class=3Dnormal>1991-07-01</P></TD></TR>
+        <TR>
+          <TD bgColor=3D#ddeeff>
+            <P class=3Dnormal><B>Associated Tasks:</B></P></TD>
+          <TD>
+            <P class=3Dnormal>Classification</P></TD>
+          <TD bgColor=3D#ddeeff>
+            <P class=3Dnormal><B>Missing Values?</B></P></TD>
+          <TD>
+            <P class=3Dnormal>No</P></TD>
+          <TD bgColor=3D#ddeeff>
+            <P class=3Dnormal><B>Number of Web Hits:</B></P></TD>
+          <TD>
+            <P class=3Dnormal>106871</P></TD></TR><!--=0A=
+	<tr>=0A=
+		=0A=
+		<td bgcolor=3D"#DDEEFF"><p class=3D"normal"><b>Highest Percentage =
+Achieved:&nbsp;&nbsp;</b></p></td>=0A=
+		<td><p class=3D"normal">100%</p></td>=0A=
+	</tr>=0A=
+	--></TBODY></TABLE><BR>
+      <P class=3Dsmall-heading><B>Source:</B></P>
+      <P class=3Dnormal>Original Owners: <BR><BR>Forina, M. et al, =
+PARVUS - <BR>An=20
+      Extendible Package for Data Exploration, Classification and =
+Correlation.=20
+      <BR>Institute of Pharmaceutical and Food Analysis and =
+Technologies, Via=20
+      Brigata Salerno, <BR>16147 Genoa, Italy. <BR><BR>Donor: =
+<BR><BR>Stefan=20
+      Aeberhard, email: <U>stefan <B>'@'</B> =
+coral.cs.jcu.edu.au</U></P><BR>
+      <P class=3Dsmall-heading><B>Data Set Information:</B></P>
+      <P class=3Dnormal>These data are the results of a chemical =
+analysis of wines=20
+      grown in the same region in Italy but derived from three different =
+
+      cultivars. The analysis determined the quantities of 13 =
+constituents found=20
+      in each of the three types of wines. <BR><BR>I think that the =
+initial data=20
+      set had around 30 variables, but for some reason I only have the =
+13=20
+      dimensional version. I had a list of what the 30 or so variables =
+were, but=20
+      a.) I lost it, and b.), I would not know which 13 variables are =
+included=20
+      in the set. <BR><BR>The attributes are (dontated by Riccardo =
+Leardi,=20
+      <U>riclea <B>'@'</B> anchem.unige.it</U> ) <BR>1) Alcohol <BR>2) =
+Malic=20
+      acid <BR>3) Ash <BR>4) Alcalinity of ash <BR>5) Magnesium <BR>6) =
+Total=20
+      phenols <BR>7) Flavanoids <BR>8) Nonflavanoid phenols <BR>9)=20
+      Proanthocyanins <BR>10)Color intensity <BR>11)Hue =
+<BR>12)OD280/OD315 of=20
+      diluted wines <BR>13)Proline <BR><BR>In a classification context, =
+this is=20
+      a well posed problem with "well behaved" class structures. A good =
+data set=20
+      for first testing of a new classifier, but not very challenging. =
+</P><BR>
+      <P class=3Dsmall-heading><B>Attribute Information:</B></P>
+      <P class=3Dnormal>All attributes are continuous <BR><BR>No =
+statistics=20
+      available, but suggest to standardise variables for certain uses =
+(e.g. for=20
+      us with classifiers which are NOT scale invariant) <BR><BR>NOTE: =
+1st=20
+      attribute is class identifier (1-3)</P><BR>
+      <P class=3Dsmall-heading><B>Relevant Papers:</B></P>
+      <P class=3Dnormal>(1) <BR>S. Aeberhard, D. Coomans and O. de Vel,=20
+      <BR>Comparison of Classifiers in High Dimensional Settings, =
+<BR>Tech. Rep.=20
+      no. 92-02, (1992), Dept. of Computer Science and Dept. of =
+<BR>Mathematics=20
+      and Statistics, James Cook University of North Queensland. =
+<BR>(Also=20
+      submitted to Technometrics). <BR><BR>The data was used with many =
+others=20
+      for comparing various <BR>classifiers. The classes are separable, =
+though=20
+      only RDA <BR>has achieved 100% correct classification. <BR>(RDA : =
+100%,=20
+      QDA 99.4%, LDA 98.9%, 1NN 96.1% (z-transformed data)) <BR>(All =
+results=20
+      using the leave-one-out technique) <BR><BR><BR><BR>(2) <BR>S. =
+Aeberhard,=20
+      D. Coomans and O. de Vel, <BR>"THE CLASSIFICATION PERFORMANCE OF =
+RDA"=20
+      <BR>Tech. Rep. no. 92-01, (1992), Dept. of Computer Science and =
+Dept. of=20
+      <BR>Mathematics and Statistics, James Cook University of North =
+Queensland.=20
+      <BR>(Also submitted to Journal of Chemometrics). <BR><BR>Here, the =
+data=20
+      was used to illustrate the superior performance of <BR>the use of =
+a new=20
+      appreciation function with RDA. </P><BR><!-- OLD CODE:=0A=
+=0A=
+<p class=3D"small-heading"><b>Papers That Cite This Data =
+Set<sup>1</sup>:</b></p>=0A=
+<img src=3D"../assets/rexa.jpg" />=0A=
+<p class=3D"normal">Igor Fischer and Jan Poland. <a =0A=
+href=3D"http://rexa.info/paper/bcdb5e21043b224589c8ba0c670a49d10f5f5580">=
+Amplifying the Block Matrix Structure for Spectral Clustering</a>. =
+Telecommunications Lab. 2005.  [<a =0A=
+href=3D"../support/Wine#bcdb5e21043b224589c8ba0c670a49d10f5f5580">View =
+Context</a>].<br><br>Ping Zhong and Masao Fukushima. <a =0A=
+href=3D"http://rexa.info/paper/81ad8e5b8306aee758f09fd5c1caa8a23c63c2d6">=
+A Regularized Nonsmooth Newton Method for Multi-class Support Vector =
+Machines</a>. 2005.  [<a =0A=
+href=3D"../support/Wine#81ad8e5b8306aee758f09fd5c1caa8a23c63c2d6">View =
+Context</a>].<br><br>Sugato Basu. <a =0A=
+href=3D"http://rexa.info/paper/104a89897dc4a05cb068858194d1d78ad98d5012">=
+Semi-Supervised Clustering with Limited Background Knowledge</a>. AAAI. =
+2004.  [<a =0A=
+href=3D"../support/Wine#104a89897dc4a05cb068858194d1d78ad98d5012">View =
+Context</a>].<br><br>Jianbin Tan and David L. Dowe. <a =0A=
+href=3D"http://rexa.info/paper/b525865598a98b326df461e4d9d2647543347eb4">=
+MML Inference of Oblique Decision Trees</a>. Australian Conference on =
+Artificial Intelligence. 2004.  [<a =0A=
+href=3D"../support/Wine#b525865598a98b326df461e4d9d2647543347eb4">View =
+Context</a>].<br><br>Jennifer G. Dy and Carla Brodley. <a =0A=
+href=3D"http://rexa.info/paper/5b3417aa2824988405f9ac934b692af30729b447">=
+Feature Selection for Unsupervised Learning</a>. Journal of Machine =
+Learning Research, 5. 2004.  [<a =0A=
+href=3D"../support/Wine#5b3417aa2824988405f9ac934b692af30729b447">View =
+Context</a>].<br><br>Yuan Jiang and Zhi-Hua Zhou. <a =0A=
+href=3D"http://rexa.info/paper/5ef9c5c8a24b6e0df983284f0caa3fb337c1a77a">=
+Editing Training Data for kNN Classifiers with Neural Network =
+Ensemble</a>. ISNN (1). 2004.  [<a =0A=
+href=3D"../support/Wine#5ef9c5c8a24b6e0df983284f0caa3fb337c1a77a">View =
+Context</a>].<br><br>Stefan Mutter and Mark Hall and Eibe Frank. <a =0A=
+href=3D"http://rexa.info/paper/18f3e26b60920b9b7aa5ca210057c15d0c0cc75a">=
+Using Classification to Evaluate the Output of Confidence-Based =
+Association Rule Mining</a>. Australian Conference on Artificial =
+Intelligence. 2004.  [<a =0A=
+href=3D"../support/Wine#18f3e26b60920b9b7aa5ca210057c15d0c0cc75a">View =
+Context</a>].<br><br>Mikhail Bilenko and Sugato Basu and Raymond J. =
+Mooney. <a =0A=
+href=3D"http://rexa.info/paper/a3fca86cb1f854c7fd7975e66aae2a5ba3710f8a">=
+Integrating constraints and metric learning in semi-supervised =
+clustering</a>. ICML. 2004.  [<a =0A=
+href=3D"../support/Wine#a3fca86cb1f854c7fd7975e66aae2a5ba3710f8a">View =
+Context</a>].<br><br>Agapito Ledezma and Ricardo Aler and Araceli =
+Sanch=ED=B3=A0and Daniel Borrajo. <a =0A=
+href=3D"http://rexa.info/paper/32122524e8078586e382e0b8f07f6a91cc247358">=
+Empirical Evaluation of Optimized Stacking Configurations</a>. ICTAI. =
+2004.  [<a =0A=
+href=3D"../support/Wine#32122524e8078586e382e0b8f07f6a91cc247358">View =
+Context</a>].<br><br>Jeremy Kubica and Andrew Moore. <a =0A=
+href=3D"http://rexa.info/paper/fcba21d24e397e9639efbad04b5be06fbe9c0df2">=
+Probabilistic Noise Identification and Data Cleaning</a>. ICDM. 2003.  =
+[<a =0A=
+href=3D"../support/Wine#fcba21d24e397e9639efbad04b5be06fbe9c0df2">View =
+Context</a>].<br><br>Sugato Basu. <a =0A=
+href=3D"http://rexa.info/paper/0e637175e298e5a11f5e7a69a442a65d7245f297">=
+Also Appears as Technical Report, UT-AI</a>. PhD Proposal. 2003.  [<a =0A=
+href=3D"../support/Wine#0e637175e298e5a11f5e7a69a442a65d7245f297">View =
+Context</a>].<br><br>Michael L. Raymer and Travis E. Doom and Leslie A. =
+Kuhn and William F. Punch. <a =0A=
+href=3D"http://rexa.info/paper/076c5b4e7bf69148bcde8c83621ecf1140a7d55c">=
+Knowledge discovery in medical and biological datasets using a hybrid =
+Bayes classifier/evolutionary algorithm</a>. IEEE Transactions on =
+Systems, Man, and Cybernetics, Part B, 33. 2003.  [<a =0A=
+href=3D"../support/Wine#076c5b4e7bf69148bcde8c83621ecf1140a7d55c">View =
+Context</a>].<br><br>Mukund Deshpande and George Karypis. <a =0A=
+href=3D"http://rexa.info/paper/a32ab1b3da96c9ae515a685b4fcf50e857708f24">=
+Using conjunction of attribute values for classification</a>. CIKM. =
+2002.  [<a =0A=
+href=3D"../support/Wine#a32ab1b3da96c9ae515a685b4fcf50e857708f24">View =
+Context</a>].<br><br>Petri Kontkanen and Jussi Lahtinen and Petri =
+Myllymaki and Tomi Silander and Henry Tirri. <a =0A=
+href=3D"http://rexa.info/paper/819bb37e80fcb500fd159702e1dc2c0fe98f38ac">=
+Proceedings of Pre- and Post-processing in Machine Learning and Data =
+Mining: Theoretical Aspects and Applications, a workshop within Machine =
+Learning and Applications</a>. Complex Systems Computation Group =
+(CoSCo). 1999.  [<a =0A=
+href=3D"../support/Wine#819bb37e80fcb500fd159702e1dc2c0fe98f38ac">View =
+Context</a>].<br><br>Georg Thimm and E. Fiesler. <a =0A=
+href=3D"http://rexa.info/paper/0244677960291674fa0816f5d724ca20eef22bf7">=
+Optimal Setting of Weights, Learning Rate, and Gain</a>. E S E A R C H R =
+E P R O R T I D I A P. 1997.  [<a =0A=
+href=3D"../support/Wine#0244677960291674fa0816f5d724ca20eef22bf7">View =
+Context</a>].<br><br>Ethem Alpaydin. <a =0A=
+href=3D"http://rexa.info/paper/6f2537b9354cfbd865cc2057f04a6216cbafd89c">=
+Voting over Multiple Condensed Nearest Neighbors</a>. Artif. Intell. =
+Rev, 11. 1997.  [<a =0A=
+href=3D"../support/Wine#6f2537b9354cfbd865cc2057f04a6216cbafd89c">View =
+Context</a>].<br><br>Kamal Ali and Michael J. Pazzani. <a =0A=
+href=3D"http://rexa.info/paper/349644828ad3c8da8e1a15eee5aec0d704db34a1">=
+Error Reduction through Learning Multiple Descriptions</a>. Machine =
+Learning, 24. 1996.  [<a =0A=
+href=3D"../support/Wine#349644828ad3c8da8e1a15eee5aec0d704db34a1">View =
+Context</a>].<br><br>Pedro Domingos. <a =0A=
+href=3D"http://rexa.info/paper/44b953c24c786a0472327b47b8682b97114621d6">=
+Unifying Instance-Based and Rule-Based Induction</a>. Machine Learning, =
+24. 1996.  [<a =0A=
+href=3D"../support/Wine#44b953c24c786a0472327b47b8682b97114621d6">View =
+Context</a>].<br><br>Georg Thimm and Emile Fiesler. <a =0A=
+href=3D"http://rexa.info/paper/f357844bd41649705c6dd963cf4b64ada94e001b">=
+IDIAP Technical report High Order and Multilayer Perceptron =
+Initialization</a>. IEEE Transactions. 1994.  [<a =0A=
+href=3D"../support/Wine#f357844bd41649705c6dd963cf4b64ada94e001b">View =
+Context</a>].<br><br>Christian Borgelt and Rudolf Kruse. <a =0A=
+href=3D"http://rexa.info/paper/a8617c8faca95eaf149b490cac7eebacb2af28ea">=
+Speeding Up Fuzzy Clustering with Neural Network Techniques</a>. =
+Research Group Neural Networks and Fuzzy Systems Dept. of Knowledge =
+Processing and Language Engineering, School of Computer Science =
+Otto-von-Guericke-University of Magdeburg.  [<a =0A=
+href=3D"../support/Wine#a8617c8faca95eaf149b490cac7eebacb2af28ea">View =
+Context</a>].<br><br>K. A. J Doherty and Rolf Adams and Neil Davey. <a =0A=
+href=3D"http://rexa.info/paper/716db199e5f006b8b564ef192177f08d5edefe9b">=
+Unsupervised Learning with Normalised Data and Non-Euclidean Norms</a>. =
+University of Hertfordshire.  [<a =0A=
+href=3D"../support/Wine#716db199e5f006b8b564ef192177f08d5edefe9b">View =
+Context</a>].<br><br>Erin J. Bredensteiner and Kristin P. Bennett. <a =0A=
+href=3D"http://rexa.info/paper/469be567c6e8bb0955c395472ef2fefc4fe43f77">=
+Multicategory Classification by Support Vector Machines</a>. Department =
+of Mathematics University of Evansville.  [<a =0A=
+href=3D"../support/Wine#469be567c6e8bb0955c395472ef2fefc4fe43f77">View =
+Context</a>].<br><br>Georg Thimm and Emile Fiesler. <a =0A=
+href=3D"http://rexa.info/paper/e76ede4369e0fb1cdbdae67f131c89b40f76e74c">=
+High Order and Multilayer Perceptron Initialization</a>.  [<a =0A=
+href=3D"../support/Wine#e76ede4369e0fb1cdbdae67f131c89b40f76e74c">View =
+Context</a>].<br><br>Ping Zhong and Masao Fukushima. <a =0A=
+href=3D"http://rexa.info/paper/17b1afb4bd706435fa92313e1e85a5d6009a42f4">=
+Second Order Cone Programming Formulations for Robust Multi-class =
+Classification</a>.  [<a =0A=
+href=3D"../support/Wine#17b1afb4bd706435fa92313e1e85a5d6009a42f4">View =
+Context</a>].<br><br>C. Titus Brown and Harry W. Bullen and Sean P. =
+Kelly and Robert K. Xiao and Steven G. Satterfield and John G. Hagedorn =
+and Judith E. Devaney. <a =0A=
+href=3D"http://rexa.info/paper/48d6beec2a36a87d9d88b6de85dd85a75e5ed24d">=
+Visualization and Data Mining in an 3D Immersive Environment: Summer =
+Project 2003</a>.  [<a =0A=
+href=3D"../support/Wine#48d6beec2a36a87d9d88b6de85dd85a75e5ed24d">View =
+Context</a>].<br><br>Chih-Wei Hsu and Cheng-Ru Lin. <a =0A=
+href=3D"http://rexa.info/paper/f624e93bd6b670bc3dc31925c1c885b538131534">=
+A Comparison of Methods for Multi-class Support Vector Machines</a>. =
+Department of Computer Science and Information Engineering National =
+Taiwan University.  [<a =0A=
+href=3D"../support/Wine#f624e93bd6b670bc3dc31925c1c885b538131534">View =
+Context</a>].<br><br>Stefan Aeberhard and Danny Coomans and De Vel. <a =0A=
+href=3D"http://rexa.info/paper/6858832ba8e9e4ac002900af151a8ffcc1796f8f">=
+THE PERFORMANCE OF STATISTICAL PATTERN RECOGNITION METHODS IN HIGH =
+DIMENSIONAL SETTINGS</a>. James Cook University.  [<a =0A=
+href=3D"../support/Wine#6858832ba8e9e4ac002900af151a8ffcc1796f8f">View =
+Context</a>].<br><br>Petri Kontkanen and Jussi Lahtinen and Petri =
+Myllymaki and Tomi Silander and Henry Tirri. <a =0A=
+href=3D"http://rexa.info/paper/da53589d7ad993c65a1857401ea6f7b0b025f41a">=
+USING BAYESIAN NETWORKS FOR VISUALIZING HIGH-DIMENSIONAL DATA</a>. =
+Complex Systems Computation Group (CoSCo).  [<a =0A=
+href=3D"../support/Wine#da53589d7ad993c65a1857401ea6f7b0b025f41a">View =
+Context</a>].<br><br>Wl/odzisl/aw Duch. <a =0A=
+href=3D"http://rexa.info/paper/e726c8c19c80616c6de5614e578f75aca791130a">=
+Coloring black boxes: visualization of neural network decisions</a>. =
+School of Computer Engineering, Nanyang Technological University.  [<a =0A=
+href=3D"../support/Wine#e726c8c19c80616c6de5614e578f75aca791130a">View =
+Context</a>].<br><br>H. Altay Guvenir. <a =0A=
+href=3D"http://rexa.info/paper/8eb7bb53b63501db4eb1c49eab30d76f7febba8d">=
+A Classification Learning Algorithm Robust to Irrelevant Features</a>. =
+Bilkent University, Department of Computer Engineering and Information =
+Science.  [<a =0A=
+href=3D"../support/Wine#8eb7bb53b63501db4eb1c49eab30d76f7febba8d">View =
+Context</a>].<br><br>Denver Dash and Gregory F. Cooper. <a =0A=
+href=3D"http://rexa.info/paper/bc9fc18577f413262d1fc743ab3438d4b37d689e">=
+Model Averaging with Discrete Bayesian Network Classifiers</a>. Decision =
+Systems Laboratory Intelligent Systems Program University of Pittsburgh. =
+ [<a =0A=
+href=3D"../support/Wine#bc9fc18577f413262d1fc743ab3438d4b37d689e">View =
+Context</a>].<br><br>Stefan Aeberhard and O. de Vel and Danny Coomans. =
+<a =0A=
+href=3D"http://rexa.info/paper/5866e91743366edf42eae4a1e4a3266e8839cea9">=
+New Fast Algorithms for Variable Selection based on Classifier =
+Performance</a>. James Cook University.  [<a =0A=
+href=3D"../support/Wine#5866e91743366edf42eae4a1e4a3266e8839cea9">View =
+Context</a>].<br><br>Aynur Akku and H. Altay Guvenir. <a =0A=
+href=3D"http://rexa.info/paper/945d8ba4c7eacfaed696aaf0bd72fd576efa78d5">=
+Weighting Features in k Nearest Neighbor Classification on Feature =
+Projections</a>. Department of Computer Engineering and Information =
+Science Bilkent University.  [<a =0A=
+href=3D"../support/Wine#945d8ba4c7eacfaed696aaf0bd72fd576efa78d5">View =
+Context</a>].<br><br>Yin Zhang and W. Nick Street. <a =0A=
+href=3D"http://rexa.info/paper/8432b52f06e00a68cb8a7a49e3938190338231de">=
+Bagging with Adaptive Costs</a>. Management Sciences Department =
+University of Iowa Iowa City.  [<a =0A=
+href=3D"../support/Wine#8432b52f06e00a68cb8a7a49e3938190338231de">View =
+Context</a>].<br><br>Matthias Scherf and W. Brauer. <a =0A=
+href=3D"http://rexa.info/paper/19d5e6db33eb1a6c31be626538ea656f79e901b1">=
+Feature Selection by Means of a Feature Weighting Approach</a>. GSF - =
+National Research Center for Environment and Health.  [<a =0A=
+href=3D"../support/Wine#19d5e6db33eb1a6c31be626538ea656f79e901b1">View =
+Context</a>].<br><br>Daichi Mochihashi and Gen-ichiro Kikui and Kenji =
+Kita. <a =0A=
+href=3D"http://rexa.info/paper/b6fb41e86105131ea2ce769929b199c003161616">=
+Learning Nonstructural Distance Metric by Minimum Cluster =
+Distortions</a>. ATR Spoken Language Translation research laboratories.  =
+[<a =0A=
+href=3D"../support/Wine#b6fb41e86105131ea2ce769929b199c003161616">View =
+Context</a>].<br><br>Abdelhamid Bouchachia. <a =0A=
+href=3D"http://rexa.info/paper/b08db10a1ffecdd5c69a23dc9ba5c0699c2b7db2">=
+RBF Networks for Learning from Partially Labeled Data</a>. Department of =
+Informatics, University of Klagenfurt.  [<a =0A=
+href=3D"../support/Wine#b08db10a1ffecdd5c69a23dc9ba5c0699c2b7db2">View =
+Context</a>].<br><br>Pramod Viswanath and M. Narasimha Murty and Shalabh =
+Bhatnagar. <a =0A=
+href=3D"http://rexa.info/paper/77faaac3f85d52abea60e7152460894b085b63ec">=
+A pattern synthesis technique to reduce the curse of dimensionality =
+effect</a>. E-mail.  [<a =0A=
+href=3D"../support/Wine#77faaac3f85d52abea60e7152460894b085b63ec">View =
+Context</a>].<br><br>Perry Moerland and E. Fiesler and I. =
+Ubarretxena-Belandia. <a =0A=
+href=3D"http://rexa.info/paper/fe3900fd025ca81857d2c7cd69e8f44e9836fe1b">=
+Incorporating LCLV Non-Linearities in Optical Multilayer Neural =
+Networks</a>. Preprint of an article published in Applied Optics.  [<a =0A=
+href=3D"../support/Wine#fe3900fd025ca81857d2c7cd69e8f44e9836fe1b">View =
+Context</a>].<br><br>Pramod Viswanath and M. Narasimha Murty and Shalabh =
+Bhatnagar. <a =0A=
+href=3D"http://rexa.info/paper/a9190b213f00d51e490ba40125b46f31d04d77ca">=
+Partition Based Pattern Synthesis Technique with Efficient Algorithms =
+for Nearest Neighbor Classification</a>. Department of Computer Science =
+and Automation, Indian Institute of Science.  [<a =0A=
+href=3D"../support/Wine#a9190b213f00d51e490ba40125b46f31d04d77ca">View =
+Context</a>].<br><br></p>=0A=
+=0A=
+-->
+      <P class=3Dsmall-heading><B>Papers That Cite This Data=20
+      Set<SUP>1</SUP>:</B></P><IMG=20
+      src=3D"http://archive.ics.uci.edu/ml/assets/rexa.jpg">
+      <P class=3Dnormal>Igor Fischer and Jan Poland. <A=20
+      =
+href=3D"http://rexa.info/paper/bcdb5e21043b224589c8ba0c670a49d10f5f5580">=
+Amplifying=20
+      the Block Matrix Structure for Spectral Clustering</A>. =
+Telecommunications=20
+      Lab. 2005. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#bcdb5e21043b224589c8ba=
+0c670a49d10f5f5580">View=20
+      Context</A>].<BR><BR>Ping Zhong and Masao Fukushima. <A=20
+      =
+href=3D"http://rexa.info/paper/81ad8e5b8306aee758f09fd5c1caa8a23c63c2d6">=
+A=20
+      Regularized Nonsmooth Newton Method for Multi-class Support Vector =
+
+      Machines</A>. 2005. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#81ad8e5b8306aee758f09f=
+d5c1caa8a23c63c2d6">View=20
+      Context</A>].<BR><BR>Sugato Basu. <A=20
+      =
+href=3D"http://rexa.info/paper/104a89897dc4a05cb068858194d1d78ad98d5012">=
+Semi-Supervised=20
+      Clustering with Limited Background Knowledge</A>. AAAI. 2004. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#104a89897dc4a05cb06885=
+8194d1d78ad98d5012">View=20
+      Context</A>].<BR><BR>Jianbin Tan and David L. Dowe. <A=20
+      =
+href=3D"http://rexa.info/paper/b525865598a98b326df461e4d9d2647543347eb4">=
+MML=20
+      Inference of Oblique Decision Trees</A>. Australian Conference on=20
+      Artificial Intelligence. 2004. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#b525865598a98b326df461=
+e4d9d2647543347eb4">View=20
+      Context</A>].<BR><BR>Jennifer G. Dy and Carla Brodley. <A=20
+      =
+href=3D"http://rexa.info/paper/5b3417aa2824988405f9ac934b692af30729b447">=
+Feature=20
+      Selection for Unsupervised Learning</A>. Journal of Machine =
+Learning=20
+      Research, 5. 2004. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#5b3417aa2824988405f9ac=
+934b692af30729b447">View=20
+      Context</A>].<BR><BR>Yuan Jiang and Zhi-Hua Zhou. <A=20
+      =
+href=3D"http://rexa.info/paper/5ef9c5c8a24b6e0df983284f0caa3fb337c1a77a">=
+Editing=20
+      Training Data for kNN Classifiers with Neural Network =
+Ensemble</A>. ISNN=20
+      (1). 2004. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#5ef9c5c8a24b6e0df98328=
+4f0caa3fb337c1a77a">View=20
+      Context</A>].<BR><BR>Stefan Mutter and Mark Hall and Eibe Frank. =
+<A=20
+      =
+href=3D"http://rexa.info/paper/18f3e26b60920b9b7aa5ca210057c15d0c0cc75a">=
+Using=20
+      Classification to Evaluate the Output of Confidence-Based =
+Association Rule=20
+      Mining</A>. Australian Conference on Artificial Intelligence. =
+2004. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#18f3e26b60920b9b7aa5ca=
+210057c15d0c0cc75a">View=20
+      Context</A>].<BR><BR>Mikhail Bilenko and Sugato Basu and Raymond =
+J.=20
+      Mooney. <A=20
+      =
+href=3D"http://rexa.info/paper/a3fca86cb1f854c7fd7975e66aae2a5ba3710f8a">=
+Integrating=20
+      constraints and metric learning in semi-supervised clustering</A>. =
+ICML.=20
+      2004. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#a3fca86cb1f854c7fd7975=
+e66aae2a5ba3710f8a">View=20
+      Context</A>].<BR><BR>Agapito Ledezma and Ricardo Aler and Araceli=20
+      Sanch=ED=B3=A0and Daniel Borrajo. <A=20
+      =
+href=3D"http://rexa.info/paper/32122524e8078586e382e0b8f07f6a91cc247358">=
+Empirical=20
+      Evaluation of Optimized Stacking Configurations</A>. ICTAI. 2004. =
+[<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#32122524e8078586e382e0=
+b8f07f6a91cc247358">View=20
+      Context</A>].<BR><BR>Jeremy Kubica and Andrew Moore. <A=20
+      =
+href=3D"http://rexa.info/paper/fcba21d24e397e9639efbad04b5be06fbe9c0df2">=
+Probabilistic=20
+      Noise Identification and Data Cleaning</A>. ICDM. 2003. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#fcba21d24e397e9639efba=
+d04b5be06fbe9c0df2">View=20
+      Context</A>].<BR><BR>Sugato Basu. <A=20
+      =
+href=3D"http://rexa.info/paper/0e637175e298e5a11f5e7a69a442a65d7245f297">=
+Also=20
+      Appears as Technical Report, UT-AI</A>. PhD Proposal. 2003. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#0e637175e298e5a11f5e7a=
+69a442a65d7245f297">View=20
+      Context</A>].<BR><BR>Michael L. Raymer and Travis E. Doom and =
+Leslie A.=20
+      Kuhn and William F. Punch. <A=20
+      =
+href=3D"http://rexa.info/paper/076c5b4e7bf69148bcde8c83621ecf1140a7d55c">=
+Knowledge=20
+      discovery in medical and biological datasets using a hybrid Bayes=20
+      classifier/evolutionary algorithm</A>. IEEE Transactions on =
+Systems, Man,=20
+      and Cybernetics, Part B, 33. 2003. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#076c5b4e7bf69148bcde8c=
+83621ecf1140a7d55c">View=20
+      Context</A>].<BR><BR>Mukund Deshpande and George Karypis. <A=20
+      =
+href=3D"http://rexa.info/paper/a32ab1b3da96c9ae515a685b4fcf50e857708f24">=
+Using=20
+      conjunction of attribute values for classification</A>. CIKM. =
+2002. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#a32ab1b3da96c9ae515a68=
+5b4fcf50e857708f24">View=20
+      Context</A>].<BR><BR>Petri Kontkanen and Jussi Lahtinen and Petri=20
+      Myllymaki and Tomi Silander and Henry Tirri. <A=20
+      =
+href=3D"http://rexa.info/paper/819bb37e80fcb500fd159702e1dc2c0fe98f38ac">=
+Proceedings=20
+      of Pre- and Post-processing in Machine Learning and Data Mining:=20
+      Theoretical Aspects and Applications, a workshop within Machine =
+Learning=20
+      and Applications</A>. Complex Systems Computation Group (CoSCo). =
+1999. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#819bb37e80fcb500fd1597=
+02e1dc2c0fe98f38ac">View=20
+      Context</A>].<BR><BR>Georg Thimm and E. Fiesler. <A=20
+      =
+href=3D"http://rexa.info/paper/0244677960291674fa0816f5d724ca20eef22bf7">=
+Optimal=20
+      Setting of Weights, Learning Rate, and Gain</A>. E S E A R C H R E =
+P R O R=20
+      T I D I A P. 1997. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#0244677960291674fa0816=
+f5d724ca20eef22bf7">View=20
+      Context</A>].<BR><BR>Ethem Alpaydin. <A=20
+      =
+href=3D"http://rexa.info/paper/6f2537b9354cfbd865cc2057f04a6216cbafd89c">=
+Voting=20
+      over Multiple Condensed Nearest Neighbors</A>. Artif. Intell. Rev, =
+11.=20
+      1997. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#6f2537b9354cfbd865cc20=
+57f04a6216cbafd89c">View=20
+      Context</A>].<BR><BR>Kamal Ali and Michael J. Pazzani. <A=20
+      =
+href=3D"http://rexa.info/paper/349644828ad3c8da8e1a15eee5aec0d704db34a1">=
+Error=20
+      Reduction through Learning Multiple Descriptions</A>. Machine =
+Learning,=20
+      24. 1996. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#349644828ad3c8da8e1a15=
+eee5aec0d704db34a1">View=20
+      Context</A>].<BR><BR>Pedro Domingos. <A=20
+      =
+href=3D"http://rexa.info/paper/44b953c24c786a0472327b47b8682b97114621d6">=
+Unifying=20
+      Instance-Based and Rule-Based Induction</A>. Machine Learning, 24. =
+1996.=20
+      [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#44b953c24c786a0472327b=
+47b8682b97114621d6">View=20
+      Context</A>].<BR><BR>Georg Thimm and Emile Fiesler. <A=20
+      =
+href=3D"http://rexa.info/paper/f357844bd41649705c6dd963cf4b64ada94e001b">=
+IDIAP=20
+      Technical report High Order and Multilayer Perceptron =
+Initialization</A>.=20
+      IEEE Transactions. 1994. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#f357844bd41649705c6dd9=
+63cf4b64ada94e001b">View=20
+      Context</A>].<BR><BR>Christian Borgelt and Rudolf Kruse. <A=20
+      =
+href=3D"http://rexa.info/paper/a8617c8faca95eaf149b490cac7eebacb2af28ea">=
+Speeding=20
+      Up Fuzzy Clustering with Neural Network Techniques</A>. Research =
+Group=20
+      Neural Networks and Fuzzy Systems Dept. of Knowledge Processing =
+and=20
+      Language Engineering, School of Computer Science=20
+      Otto-von-Guericke-University of Magdeburg. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#a8617c8faca95eaf149b49=
+0cac7eebacb2af28ea">View=20
+      Context</A>].<BR><BR>K. A. J Doherty and Rolf Adams and Neil =
+Davey. <A=20
+      =
+href=3D"http://rexa.info/paper/716db199e5f006b8b564ef192177f08d5edefe9b">=
+Unsupervised=20
+      Learning with Normalised Data and Non-Euclidean Norms</A>. =
+University of=20
+      Hertfordshire. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#716db199e5f006b8b564ef=
+192177f08d5edefe9b">View=20
+      Context</A>].<BR><BR>Erin J. Bredensteiner and Kristin P. Bennett. =
+<A=20
+      =
+href=3D"http://rexa.info/paper/469be567c6e8bb0955c395472ef2fefc4fe43f77">=
+Multicategory=20
+      Classification by Support Vector Machines</A>. Department of =
+Mathematics=20
+      University of Evansville. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#469be567c6e8bb0955c395=
+472ef2fefc4fe43f77">View=20
+      Context</A>].<BR><BR>Georg Thimm and Emile Fiesler. <A=20
+      =
+href=3D"http://rexa.info/paper/e76ede4369e0fb1cdbdae67f131c89b40f76e74c">=
+High=20
+      Order and Multilayer Perceptron Initialization</A>. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#e76ede4369e0fb1cdbdae6=
+7f131c89b40f76e74c">View=20
+      Context</A>].<BR><BR>Ping Zhong and Masao Fukushima. <A=20
+      =
+href=3D"http://rexa.info/paper/17b1afb4bd706435fa92313e1e85a5d6009a42f4">=
+Second=20
+      Order Cone Programming Formulations for Robust Multi-class=20
+      Classification</A>. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#17b1afb4bd706435fa9231=
+3e1e85a5d6009a42f4">View=20
+      Context</A>].<BR><BR>C. Titus Brown and Harry W. Bullen and Sean =
+P. Kelly=20
+      and Robert K. Xiao and Steven G. Satterfield and John G. Hagedorn =
+and=20
+      Judith E. Devaney. <A=20
+      =
+href=3D"http://rexa.info/paper/48d6beec2a36a87d9d88b6de85dd85a75e5ed24d">=
+Visualization=20
+      and Data Mining in an 3D Immersive Environment: Summer Project =
+2003</A>.=20
+      [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#48d6beec2a36a87d9d88b6=
+de85dd85a75e5ed24d">View=20
+      Context</A>].<BR><BR>Chih-Wei Hsu and Cheng-Ru Lin. <A=20
+      =
+href=3D"http://rexa.info/paper/f624e93bd6b670bc3dc31925c1c885b538131534">=
+A=20
+      Comparison of Methods for Multi-class Support Vector Machines</A>. =
+
+      Department of Computer Science and Information Engineering =
+National Taiwan=20
+      University. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#f624e93bd6b670bc3dc319=
+25c1c885b538131534">View=20
+      Context</A>].<BR><BR>Stefan Aeberhard and Danny Coomans and De =
+Vel. <A=20
+      =
+href=3D"http://rexa.info/paper/6858832ba8e9e4ac002900af151a8ffcc1796f8f">=
+THE=20
+      PERFORMANCE OF STATISTICAL PATTERN RECOGNITION METHODS IN HIGH =
+DIMENSIONAL=20
+      SETTINGS</A>. James Cook University. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#6858832ba8e9e4ac002900=
+af151a8ffcc1796f8f">View=20
+      Context</A>].<BR><BR>Petri Kontkanen and Jussi Lahtinen and Petri=20
+      Myllymaki and Tomi Silander and Henry Tirri. <A=20
+      =
+href=3D"http://rexa.info/paper/da53589d7ad993c65a1857401ea6f7b0b025f41a">=
+USING=20
+      BAYESIAN NETWORKS FOR VISUALIZING HIGH-DIMENSIONAL DATA</A>. =
+Complex=20
+      Systems Computation Group (CoSCo). [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#da53589d7ad993c65a1857=
+401ea6f7b0b025f41a">View=20
+      Context</A>].<BR><BR>Wl/odzisl/aw Duch. <A=20
+      =
+href=3D"http://rexa.info/paper/e726c8c19c80616c6de5614e578f75aca791130a">=
+Coloring=20
+      black boxes: visualization of neural network decisions</A>. School =
+of=20
+      Computer Engineering, Nanyang Technological University. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#e726c8c19c80616c6de561=
+4e578f75aca791130a">View=20
+      Context</A>].<BR><BR>H. Altay Guvenir. <A=20
+      =
+href=3D"http://rexa.info/paper/8eb7bb53b63501db4eb1c49eab30d76f7febba8d">=
+A=20
+      Classification Learning Algorithm Robust to Irrelevant =
+Features</A>.=20
+      Bilkent University, Department of Computer Engineering and =
+Information=20
+      Science. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#8eb7bb53b63501db4eb1c4=
+9eab30d76f7febba8d">View=20
+      Context</A>].<BR><BR>Denver Dash and Gregory F. Cooper. <A=20
+      =
+href=3D"http://rexa.info/paper/bc9fc18577f413262d1fc743ab3438d4b37d689e">=
+Model=20
+      Averaging with Discrete Bayesian Network Classifiers</A>. Decision =
+Systems=20
+      Laboratory Intelligent Systems Program University of Pittsburgh. =
+[<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#bc9fc18577f413262d1fc7=
+43ab3438d4b37d689e">View=20
+      Context</A>].<BR><BR>Stefan Aeberhard and O. de Vel and Danny =
+Coomans. <A=20
+      =
+href=3D"http://rexa.info/paper/5866e91743366edf42eae4a1e4a3266e8839cea9">=
+New=20
+      Fast Algorithms for Variable Selection based on Classifier=20
+      Performance</A>. James Cook University. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#5866e91743366edf42eae4=
+a1e4a3266e8839cea9">View=20
+      Context</A>].<BR><BR>Aynur Akku and H. Altay Guvenir. <A=20
+      =
+href=3D"http://rexa.info/paper/945d8ba4c7eacfaed696aaf0bd72fd576efa78d5">=
+Weighting=20
+      Features in k Nearest Neighbor Classification on Feature =
+Projections</A>.=20
+      Department of Computer Engineering and Information Science Bilkent =
+
+      University. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#945d8ba4c7eacfaed696aa=
+f0bd72fd576efa78d5">View=20
+      Context</A>].<BR><BR>Yin Zhang and W. Nick Street. <A=20
+      =
+href=3D"http://rexa.info/paper/8432b52f06e00a68cb8a7a49e3938190338231de">=
+Bagging=20
+      with Adaptive Costs</A>. Management Sciences Department University =
+of Iowa=20
+      Iowa City. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#8432b52f06e00a68cb8a7a=
+49e3938190338231de">View=20
+      Context</A>].<BR><BR>Matthias Scherf and W. Brauer. <A=20
+      =
+href=3D"http://rexa.info/paper/19d5e6db33eb1a6c31be626538ea656f79e901b1">=
+Feature=20
+      Selection by Means of a Feature Weighting Approach</A>. GSF - =
+National=20
+      Research Center for Environment and Health. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#19d5e6db33eb1a6c31be62=
+6538ea656f79e901b1">View=20
+      Context</A>].<BR><BR>Daichi Mochihashi and Gen-ichiro Kikui and =
+Kenji=20
+      Kita. <A=20
+      =
+href=3D"http://rexa.info/paper/b6fb41e86105131ea2ce769929b199c003161616">=
+Learning=20
+      Nonstructural Distance Metric by Minimum Cluster Distortions</A>. =
+ATR=20
+      Spoken Language Translation research laboratories. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#b6fb41e86105131ea2ce76=
+9929b199c003161616">View=20
+      Context</A>].<BR><BR>Abdelhamid Bouchachia. <A=20
+      =
+href=3D"http://rexa.info/paper/b08db10a1ffecdd5c69a23dc9ba5c0699c2b7db2">=
+RBF=20
+      Networks for Learning from Partially Labeled Data</A>. Department =
+of=20
+      Informatics, University of Klagenfurt. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#b08db10a1ffecdd5c69a23=
+dc9ba5c0699c2b7db2">View=20
+      Context</A>].<BR><BR>Pramod Viswanath and M. Narasimha Murty and =
+Shalabh=20
+      Bhatnagar. <A=20
+      =
+href=3D"http://rexa.info/paper/77faaac3f85d52abea60e7152460894b085b63ec">=
+A=20
+      pattern synthesis technique to reduce the curse of dimensionality=20
+      effect</A>. E-mail. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#77faaac3f85d52abea60e7=
+152460894b085b63ec">View=20
+      Context</A>].<BR><BR>Perry Moerland and E. Fiesler and I.=20
+      Ubarretxena-Belandia. <A=20
+      =
+href=3D"http://rexa.info/paper/fe3900fd025ca81857d2c7cd69e8f44e9836fe1b">=
+Incorporating=20
+      LCLV Non-Linearities in Optical Multilayer Neural Networks</A>. =
+Preprint=20
+      of an article published in Applied Optics. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#fe3900fd025ca81857d2c7=
+cd69e8f44e9836fe1b">View=20
+      Context</A>].<BR><BR>Pramod Viswanath and M. Narasimha Murty and =
+Shalabh=20
+      Bhatnagar. <A=20
+      =
+href=3D"http://rexa.info/paper/a9190b213f00d51e490ba40125b46f31d04d77ca">=
+Partition=20
+      Based Pattern Synthesis Technique with Efficient Algorithms for =
+Nearest=20
+      Neighbor Classification</A>. Department of Computer Science and=20
+      Automation, Indian Institute of Science. [<A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/support/Wine#a9190b213f00d51e490ba4=
+0125b46f31d04d77ca">View=20
+      Context</A>].<BR><BR></P><BR>
+      <P class=3Dsmall-heading><B>Citation Request:</B></P>
+      <P class=3Dnormal>Please refer to the Machine Learning =
+Repository's <A=20
+      =
+href=3D"http://archive.ics.uci.edu/ml/citation_policy.html">citation=20
+      policy</A></P></TD></TR></TBODY></TABLE>
+<HR>
+<!-- OLD CODE:=0A=
+<p class=3D"normal"><font size=3D1>[1] Papers were automatically =
+harvested and associated with this data set, in collaboration with <a =
+href=3D"http://rexa.info"><font size=3D1>Rexa.info</font></a></font></p>=0A=
+-->
+<P class=3Dnormal><FONT size=3D1>[1] Papers were automatically harvested =
+and=20
+associated with this data set, in collaboration with <A=20
+href=3D"http://rexa.info/"><FONT =
+size=3D1>Rexa.info</FONT></A></FONT></P>
+<TABLE cellPadding=3D5 align=3Dcenter>
+  <TBODY>
+  <TR vAlign=3Dcenter>
+    <TD>
+      <P class=3Dnormal>Supported By:</P></TD>
+    <TD><IMG height=3D60 =
+src=3D"http://archive.ics.uci.edu/ml/assets/nsfe.gif">=20
+</TD>
+    <TD>
+      <P class=3Dnormal>&nbsp;In Collaboration With:</P></TD>
+    <TD><IMG=20
+  =
+src=3D"http://archive.ics.uci.edu/ml/assets/rexaSmall.jpg"></TD></TR></TB=
+ODY></TABLE>
+<CENTER><SPAN class=3Dnormal><A=20
+href=3D"http://archive.ics.uci.edu/ml/about.html">About</A>&nbsp;&nbsp;||=
+&nbsp; <A=20
+href=3D"http://archive.ics.uci.edu/ml/citation_policy.html">Citation=20
+Policy</A>&nbsp;&nbsp;||&nbsp; <A=20
+href=3D"http://archive.ics.uci.edu/ml/donation_policy.html">Donation=20
+Policy</A>&nbsp;&nbsp;||&nbsp; <A=20
+href=3D"http://archive.ics.uci.edu/ml/contact.html">Contact</A>&nbsp;&nbs=
+p;||&nbsp;=20
+<A href=3D"http://cml.ics.uci.edu/">CML</A> =
+</SPAN></CENTER></BODY></HTML>
+
+------=_NextPart_000_0007_01CB88D2.24CFF7F0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://archive.ics.uci.edu/ml/assets/logo.gif
+
+R0lGODlhgAF8APcAAP////f3+Pb2//H19e3v/e/v9+/v6e7u7+Xl9Obm7uTk5uHg797e5t3d39bW
+8dfV5dbW39HV3tTU2M7O38zMzP/MAMbG1cfG3MTEzPLFFb2+1fHCB76+xL29zuW+KLW2zbW1xq61
+xte2OeC1EK2tx62tvsyvSKuqr9CsFqWlvKakw7+mVM6nGKWjtZqdtZubvpqcra+cYLydH5WWtZmX
+prmXI5SUraSTaKqTJYyMtYyMrYyMpauNKpaJcYqInYSFpIODrISEnGmHpYp/dJmAM5KCMXt9nHp7
+pHR9lImAMnt7lYJ5N3R0nHt0eHJylGt1i4hzPHlzPGtri29qemZmmWprQWRkhWJji1hig2FeeFtb
+jVxhR1pag1FagWVYTVJUhU9bTEhaTFJSeklTelBRc0xMgURTUUtLe1NLVktKc0dHa0NDe0JCcitK
+V0NCZS9HWUFBaTU/aTs7cyVCWzo6ah4+XzMzZjIybhU7YRI8YDAwWikvYwg1ZAQ1ZSkpZCoqWQQ0
+ZgIzZgAzZiMjYiIhWiAgUhsaWhkZURkZShISQxAQVBAQSg8QPQkJSgcHQgEBQgABOwAAMwEAKQAA
+GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAQUAP8ALAAAAACAAXwA
+AAj/AAUJHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuX
+MGPKnEmzps2bOHPq3Mmzp0ghQIMKHUq0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWKsqFAKgq9evYMOK
+HUu2rNmzaNOqXcu2rdu3cOPKnUu3LlwhW+3q3cu3r9+/gAMLHvwWb0KuhBMrXsy4sePHiQ0jRAy5
+suXLmDNrtiv5IOXNoEOLHk1acGeDn0urXs06AokXO5RMmZLlig0QFhgkKMD68umCqXsLH25ZgZRD
+hgYRWrSIjZQrYrhcueJkR4kPFw4QV/ybYPDt4MPb/4XwIQUNI1rEiEljx48eN27snAFRIIGEDipm
+7Agi5cuX6T64AIIC4vXV3UDfFajggmMdMMELTnChxh+G7EEHG2dcYYQNKnzAAQYSSADBAF4FcMAB
+CSgAwQQdtKADExKO8YUTLUwQAINxHShQgjj2uJ0AE6jAhBh2GGKIH3JwwYQOKYCAwQUQ6FZAADem
+ZWICD1gQgg1MQLfGGlzsYAECPqqloyA8lqnmaAyoQMUafhCyBxtaLKmCBhMoMGWVdZnIwAQfzMDE
+F2zIAWYQJUCw5lhnpsmgidotmhkEOnBRJCFxYLFDCh08cMAAfAo2QAIXkDCDEVzAQQcdXxjxwgUC
+SP8KQKNnJRDBBLjmmiuBbCWg668TJCBXABbscAUbdtixx7LL0pGGEyCQ2NYBKwI7AQS8yTqWAS1w
+QYghdohhhAsdMABqZVQ6WIIOUozBxrJrSDGDBdL6SKtZyjKr77J2MLCWAvnuyywbcEHAxKpT9GCC
+CBU03LAHJsQwRBp7cAHCWhYELPAeV2gb1gVK6LHIIWsAUe65oKUbQQg7WAHHsne0moIF2S54b1l7
+OKyzw1lcrNYHWey88x5tBdCBGHQ0sYLQTD/cQxpp+HxWCkE3XQEdHnvVgROEODIIFSqYK9yoE5AA
+xBVyDOJHzD+QEEGs4t1Mlh1WV5BFCmtRXTfRayX/IAUdPWRQd9030HGFombpbTXW2hrN9SFsADFB
+pOGNakEKR2ghhx9+xDtDuWMJ8ABpco9Ft9V3511103yn1QEdWXgw+OwZTJFGB4mvzjTjizIAghPJ
+fvECA6EuWF+QR3CBrBwyX8ArABFQcYcO9W5WulinN526WoqzbqUNdNww+/gNx7BHCWV1v7uaAShg
+gQuaswHtAsNSaX/xlxXwZwmoshFHGlaAgQI4kCw7LMIGorleWLLHtO2lRX1Ca51ZdEAHE5DvgiZg
+g9TCAsGd8U5B+iubDqhwhjVowQaTY8sAFDABDJTABS7QgRGM8AQq2JAJODzCDmjgghJ0wAIRYMAB
+//CXGP29DwlYwIIVDkEIEEDgD4joQAEWIEQiNkaBYGGg0ByIlg7qTIJkKQEcGHbBC67ADhMYixcd
+9kHiBMA+KviBFM7AhjR8gQo6+IC/3NIBI1DhCmeQgxzSEJ89EEIRiGzEIxbpCEcw0Q5sEIOGZtCh
+B1RPMQd4gAb2sAgSdEUMkuCCDpxwhScYQQcdoJxjsPgVLe6Mi1PTXQTP0gE7WLCMZeyBGFTplTU2
+rI2sOcAFXOAE9hACU2JAQgo0sMe3BAADLkiBNKUJAhCQ4JotgMEOjHCFNNBhD4dwBCTGOU5H+oFV
+TtABCR5gRcAsIA4/AIACfEAHLsDQBkaAgyMeYf+IM3wAMqz0iit1Bsvc7c0sCggf+TJggoaaQHbk
+E4MOxOLLqwknAR/4wRkIcYhDDEJ+LmBmO9ky0q+YSAEPYJELMreGQSyCnJBoBBP3cAYjzKxmgumA
+IVogABfIj36gKsAMCkWISKyBTKvMC77qVtD0yXJoZpHCU4WWgRsQKZLqcdYQIFo3E9Dheb2cKhtZ
+k4AUiIGjhJBfCi5APM288QEtOkIZwNnIRjBnEYSAg7w6IKzAMIANV5iAlvrqlQI8aFB+oEIzFxPQ
+rgyUZ3jjnlgbBkawWIAOXG1a4cRQAlUS6289mF0WJgqWigITNArQgRj8EAcp2AADhC2NABjQgR3/
+cAGcHe0ocw5xByq0gGaAwYAO0viVBLQVACBAAhL8EAkxjI4xjQXAYxvWVLJUtLJf4UJo69YENuCO
+LBdgQxMEZ7UMcnCyFiXNAIwQiUnswQLiSUAHfCCGP3T0mIdYRCMKkQYmrBNufKFSYcvWpRIUYIAw
+kAIiJPEFXg4mutO1W2QfiF7sdmUCdCBv05rAhcWOpQBcmMLg0gDfr5hWNAe4nBLsUAg2vMCZwcpM
+A1pwhTvcN1nLWYQfvjADDdAPMA+YQQue0IgOd+WNJFjDHYLgRO4otSwRrq4aK0wWKQyBcGzAaVn+
+GoO6DaFjJkbvaSGTYhdIQQ53SIMRNIDUtgwg/8EetkwBPnCwRjTiD6v6QyE62tt1atkuB+hAAxrQ
+IS0L4ANzPCG9HvzkuTF1wl2kslgGYAcyMs0DbLjAWkqgBsJxobRixkwAIJCCK4BTD1aYwXOdWQI9
+xFM0F2DCIB6xiD2oypD5JcQZgGABBxMmASS4Qhzs4AQMlHQuEH606g4qlhKIwctSaAsbuuywDKxg
+CFmQz3fDWrcxK8Z9QbCDTNPA60u6ZQJpkMKxK2OBKyDiEYWww6raUwjm7AFaCjD3YAJ9hSP9IALr
+LkyjTadsyTI7LFe48uKIu5YgNMEDEkPaGZjQAX2f2DEBeEAKuFBvO1A8tnE5gBPu8OPSHMDZiP/E
+86q+WW+8imEHKWTMnKlgIRiAnDMDx17BKXxwsFTQaitIQ8C/AoEz1PMHi3ZqtxtzgAjoQA5M7IIL
+EGeXEhyCCRcF38jkvXI7HHIRhaDDx/UdGAGQQAwcow9fko06SMey54Xdg4aFNgQjDObiiREmE4rE
+hh+kki8J0EIjSiycdr+bECufd5w6ajgbaGA3Q6dLAmZAhz8EIc5yYbv23G5Qq2G3A51G3Qb/gnfB
+HAADI//DF1zQgL9AAFlkL00CbHCHRqo88XbQs0ePXgILLKAAUxqMBWQthxLEvi2abyDnle55sdhA
+zDfvS+kBIwEp6EEPVyhB9PUiATV8OjwTYEL/ISBxiHkXMFm4PkQh/kAnJtjAhxcIYgJORP8BgMp+
+cSlACu6wiCD42i3Jt0XLZ12SBhZOsF1NYweEMX19MQAkkAaEcAUfsH16EQApUAivBhkCAGB81AWL
+4AiEcH5cRwd2MAiHoEjkJFNy4izRQQVMoAQ+YAM20AIk0AEUoAAnImBsMQFcsAhXAFZ3kXMLtHOR
+BnddoV1WIwLethcMuBcBEASMQAgp8H988QH55UmAgTIf5gB/lhYHQCAHYANeJ4L4lVu6NTK59Qdq
+qIYjuCprM0jRIQWb8gGTo4NncQBB0BwRgGxCmEVEeBYlUIBf8QXi0zTmdXehBhhAIAmS4AKJ/zEB
+dyAJf4CFfrEAj1cWWHJ8ZdEAVrADN2IwnEOC+XUIfoAhGqIDM/ACNcgBHGABFoABsMiKHFACLTAD
+QDBDUsAFcnB+zMMELyBodkgWLYAkhCdwh3EWUTaAYxGIRggAZ3BLTHOIgtGEdvEC+6UDkRcXCqAF
+g3AFfpCBfcEAejQWCzABDUCFd4gEi3AECZAARlAI8QZJ1aECFgABOKiFaCEA9mdcLNICRmAFZ5B7
+aqMGUpADJDABXegVGvAlDAeAfdhKf2gWzNh8YcEG0Cg0JpAGC5iIfREEjeBd2QgXAbADi8B6h3AG
+gHEAIWAB+JMAOvADQNgWCXAFjpBuVsAei/9AByCQACGJFibSABbgj19AB99iCIaDSscFFhOAIQ3J
+FgH4SsrYbILoFRZZXhqJiEsXYE7gCGJAdYMBAaoCAAmgB4dQcnxxAD7gAzfXAV+AQHORAHQgCWyg
+AirwBZHABhTIFwhwAXHEBXRgJGllBCCwAKEykn4ABJiHFk9JUFEZFhPpPRV5kTsjjYFBjXIhBZAg
+BejYFy5wCDsAAAWAmeijiW8xABHilV0xA2WgAXQRANYoBQuwAFQACWKQl34RAAMwASnABGxwgiTD
+BBN4ZDNwB04AAwbgkMeIL5kFlZs2lV1xBktjiASDlYvDF0oQCU6wmYCnBYbwXCRwCF1QAkf/EJN0
+EQRl0JQAoJqsSRcOIAdiMCYkqZmPQSUJAAJBcAbhVAhnYAMKEAAfQAhk8APog3wPKVCSyZjLZjUK
+GBZI2DQZsIR6YZlvUQKRwAW22Rca4Aco2RUiFwmRkAjoA3x6YQTnGRYz4E91MQBacAjoUwKE4ImX
+MSoZJQaHoAhsICCc5IIYQKDJCWUHyjOOqBYugF4LChZSgIBMswc92RYS2hYPcAh7kJiBMQOK8Jle
+YQF6gAjhAgAIsJ6t6QRngJ4vsAaUOCwz0AgvBgR+MKCZMSocMHJ34AZ+kJNr4FxOWaBd8XPa45Zp
+8XxWkwFF+hU/IGJWkwaa5hYu8AM2UoTV/5miX/AI6LlvUlAIDTlqF9AChgAEAqABqAkXCeAfcbaQ
+fDoXEGAHOUAAayAHq7YZmbQDZKAHOdZJd9qjZKGnDTSqZ6EDk+VVYgEC6DUFuKoWezAFJHgF2zZl
+WUkXJPAI6tYYEJAGcEBEB8AFikACAyABDbCkX4FhTmBuHfAHXRBzw6IEX8AEe4CN6sUAJeAEbGA4
+h2omeAoAcvCjDQOsa/EDuyoHYpEAOWM1PfB9bAECoScCQ6AGdsAFLeBrTaoWAUCTkQpk9AMCf2AF
+ZBEBbGAIKbBCCsCBbmEB7EcCGhACKwUELmAFgMkEpIkWE/AHk1AGZkkavsJX2RhdVdk0Pf9gd2ph
+BE1QXtMZFnRgaUKjhG5xBTurMx5gVeHCpl2xsGnRAH8wBilrFwzAZgAAA4hgpWMxAfV1BFHbINkB
+AoWgCGfABWlwCI+gCIYzA1oQCYfwsG3BBJNgBRyrJtElBoXIND0QbWpxpOW1oQx6t0xzO2xxAHYQ
+nVR1A1fJbY06FynQCEFKGO5znAvgBLJaFgoASlTgKW8xAWUAHXCwA9j0HDlQLm9kA4pwBV2LiWuw
+CC2gLdF1BUi6Myvgt2ghBrGrMzcAsGDRAs9mNTdwBpE3A2lQN7MLaskaFwHABIdQjIHRPgXQAEpw
+BUrmAGbBAFqwhkpAnoBoCJGwCOgKAJD/EhZHsAh4gwCr6hYPsAeM0LqSEl06+6dRmhYDYKtC0wNO
+MBZwuZw686BKaxYJMG3cRVqK2zQQ6oWEor1/sQBnEAmNQAhA4L9XQGx+8AhGgMBlEQSOMAl3cL5i
+sQBpwAYkoAVncKFm4bGN0JgFEl0V1QR6exYgQAcBTBawS7xs4LZgwQTo9aBAyLRnwQBJoq1rIS2f
+mpOO0J1lUQAuIAYwoASPQAX92RYTsAeRYAdlWhYWgJ/jZKUMkJBncQFrcAgzsCjRBQEwbDUeAAf9
+u69ncLsE9a5h8TpzV781bBYFYASYVTcxIAbndbxwYQF7QAVA3KdOIAAHkAaK4AIcAAf3/xsWILAD
+LfABNiAFLGkFlOoWAnAGkOAENhwWH6AhNIo3D9BmbWG9ivADc2sz8RoAdqC/OuNVQVAWEyAHhKqg
+7RQAtjs4hdMCZAcBZAu0TKMG/2S8ixsXJbAHQBDIU8MIhVACV3AIjjgAoPMVB2AEhNAFOxAb6EMC
+gwCOayEFoZS6HAoADFB7eAPOYHEAUlDKyAwa0QUAdjs4IqAGbGAD7OQVA4BodqBwQNezY/E6rNzK
+H6yoVXIAICAFdjAFcSw0McDPA7w+cyGG7PsXJLBgiEAIclDFJtWZWCBoITIlOlClQ+caGiAFkwAH
+L7uDRClD3+sW62UIP7DOmtHOKcAG4/8TA1PAL6uyB2nQBPSqM03AzWGRvOjlMCtArHuAfjv9z/ur
+BqO3tBwZF0ZgByfQJ/iTAosgCYiACGvgpWLBAFwwBlo2ABHQBV2gnV3xwoyQCJGgBq0nFwpABVed
+yW39Fj8wCCjbI+2syoY7OxDTUAndNB5AB1Jqzwp1QSKg1EzzZcg6zHCxYlMdF4ScLnwyzZBQCNe8
+A4MNAB3QBSHQ1UhwBMc2ADZwCIyICE5AwmURALwxv5JgB2mgxJQTjLl6CPLJIO0MACmQBn+NS1bT
+BFiHFuG117zdVXLQqU7Nx29BA1ItFwRw0hbABZBAB8xLFgNgW+Y2AMRkwV3BAFawCHf/IAVGcKxv
+0clMIE1poAUP8AD9xgUdUCXtKNtkoQOLUNsKctsAwAVFO9yDswJskNlfUQI/q991o4TKyMNmEQJ+
+ENFvsZca0NYJAAN60AhMgNoAwLkC/BUKoARK0MNswKxJGRcTwFx0sAaPcFRdkQA5YAiLoMkFsIEC
+cD+5yqxmrRr2/XrUJuBMo4RNbRYuYAc3juMOo4SPS1FPDRcMIHZxsQAvwARJgitX0GIYbblG0AWY
+l+EbXhYPQKMrLRcFQAWDYATCZQhHABYfEImF4AQf0AALQAD6eCKaeASQ8NL1Ha9fkTGAC+QVIAJs
+0AIh+QFswMbDrYTBKswEXBdOsAeq//QAv3gj6vpcD/ABkeKfZVAGTnCCXWB0O0DhEQACP3AFOw4A
+A9ACUuC2A1AGkJDGcaEBbGClEWADEhAWDOBu+6XILxAsxsUAutFOcqAIwRw3dF7nYoDQeF4BuQwX
+S5kFvszbPUAHQ77YhU4XGOC9XvGpjGAFATABcLAIrHkBcqAFxqUC76gHK0kHjZAGiqoWA7B/e6AE
+0/0VF/AFP2AA5FkAYtAIIADTAKACYkABAOAAwPgV9tcVFkAFkWAIhMIGRxAC5qgBB2lFF/AIX3DS
+w2HfXgEBVwAHP87bJpAFZ8DVboGHSYPYVhMD3reHgFjkcSF4JRYCkCAJP/AAaxAJjP8QLHTwCJ/D
+Bo207wDwANXx6gzb430npU23A4VwnosaFgpgBIPAjiWCmzMOFi/wnv2uARZ8oh0AAS1gBX7wBy93
+TRoQe1An3sRB8V8BAmzABjcg8juTATGQBTfKxWxhMHQwBTGw2ztDsGf/6VKJ3HDxAJyjAQHwAyD4
+AldACKNkW81VAmVgB2TgA1WC623xwlbga/TZATogwnRwBzngANs3AFTQCFJgSVnSATFUcWxBAmww
+oCeCvzagBTvaFQYABx66CGegAyEQAWRnBYiA6sJB9mDRARGsBgkTAw4lOwzVUDeAbeHiAhSuFgxg
+AwEpBkOgMA7VUCvQA1NgsMa6gxv/oy84WxcWMAhysDV6gAV28Ah40wKKcAjqgX3+fRYD4ANpAHKq
+LY6J+hz+pQFncAcXEPBjwQQA4QiOERUtrGBhciXFAAANHT6ECGDCGSYBIj5k8ENMiYca/ND58SSL
+ljVWKFwMYOUPiIstXb6EGVMmACGCbN7EKWQmTAYpmHA5w4YOHTt2hp658qPDgZ1NIR4gYeSKGDZC
+6bDh4mRGBItOvX6NOKEMFzlOMBhCpAAABCozLMCx0hWswwAlnFjoGmCCChU6nDgJ0uKBwxKIshwQ
+8PKKJEcwGuxwgcDGmA9NA/z4M0PuwwAXmGjpANEjoRANJwyyYyHiAht/Us+FHRti/02ctXXKxp1b
+927cM6RwVKGEwUMBeHUPaHHFBYQFINbcATIjxPCIPiA5YerygYssSpg+sEiFyoKmCsQQmpEgwPoA
+BR6o0HIlwkULdg4ZuSBxQsQCVCJFciIB3gaMibbabrqNQAUXZDC3vDZTsISsgFhDkR1gSgkSIxiA
+EID1GiqBjdAssIABJ7QYrDwxDLmiBQws6OCFn3To0KEI3JDEECMiSICBHiMAkgpDCiFjvwaPNPBA
+QRI8skknn4TyogF0uEKK/GISQAtFpPjAAiC//KCEBgKYQY4UGDjiCiXEgIEhr16Qgw0ruCjjiyAa
+kGmHPx4xJA4pgHjijC72aMSICf9qjBK3JA9kMlFHH4U0URLEoCMNLi69lA5CrLBhDRY/W4ONFhCd
+6QEQbFAhu5kGgI8ONc4gZBFDyggtUt4Wtc1WXXfldTcKSnABBmFh6KAEK+iQAgQQzuw1gAMguIC8
+XnPDNadpr8U2W6cGYEBVbb+FrVoEwSW3XHPPRdclcW1qNF1334U33ibXXVJee+/FN1+n6G1XX3//
+BThdfgMmuGCDsR34YIUXZnheJREUImKJJ6a4YosvxjhjjTfmuGOPPwY5ZJFHJrlkk09GOeWSH2a5
+ZZdfhjlmmWemuWabb8Y5Z5135rlnn38GOmihhya6aKOPRjpppZdmummnn4Y6aqn/p6a6aquvxjpr
+rbfmumuvvwY7bLHHJrtss89GO22112a7bbffhjtuueemu26778Y7b7335rtvv/8GPHDBB7cpjwoO
+PzyM2hBHXGgUDkfBZcMPX7rxsS1X+nHGGd9AcbEnr+Bu0A/fYPHNHYdccsyRXh3s1o/WfPPTwwb9
+wAryeHt0ynGSHfUKIm+5dqVf95r4omOXnXHaV9ccd7d1D/2mNnoPWnPgsTaecJw0H+HAKBBvA23E
+nW8b9BEOD9+mDQ4/f3egrdc6e+1t4l5JxK8ve/zcEQcjdZsQJ0LrkrC50tmPcfgTBPyQVxvhCaJ2
+o0uf6RCXBJjJb3ucU9L0NtcH/wkKYn0VKN0DGRfB/7lPEJY7oAFTBz+W1e9A7UNgGDZHPvqtUHlK
+kiHjaHgT2SFQeMhr3eYQmMDUIS6H0eOdCYdWO8whDg2rS54Sjzi7GkYRiQ7EHOimiD4JUpFlFiwh
+9W4CRMRxkIeQux8WEyc7EkLxcEuQXQHPyLkPDvGCFeie7bh4kw9uznNV7OMNkxhHnEBvdT9M3hij
+WBvNBfKEhzOjTQZYAQoajYm7m9wGnui+I1YBDLFr4/g06D7khSEPsaukGpE4ug3kYYqDrAAReCDI
+h4GRcTwIoBsrYMojyvGRG+wDK11JS12ib5RXZNwIiNA+/z0sdluAJjSLQMvY1f9gmfqrIvuuWUxr
+MlOOjPMkHJspvDYgDwXAO6YsqZnIHPoSjDyr3QdxpzkebBKJmsPDHK/Xx0EqEpJ8zGJAD5fKI95k
+ksj85xeVqEJAAJSShdujIAo6x9s5EKIDvclEwwjLQZIPcVu4yRbS2EIrgm+QZrjJNEn50ZBi7ogN
+tYkZmni4fNqkf+5r4C9piDgZcDSbBXSeLpFWOw1GDnF4sGfL6jjHSFr0jldsYFSD6D7EQQEnKrXj
+HF2mORbg5A3ZG+UgfThVhJa1qdgMq1hbRkYMFpKs/rziL9OHuBrUZqm/rEAVanqgnGJTlYHASR0w
+Fzs9IjGHfyya8BrXOD4Q75P/KdzoWpupyptIVYkzrUANorkFZrbMgogbwWZr8Lo8HNSEfr1oXIWq
+1Y5WMY83gaFkD5eH0iLOl9ncrEgh2Yc+uBC2/kOcF2rzvd2xdQkM1CX5GllY5xG2Nhqs5DvhicI3
+UveKpoXsL7c6Wcuu8q1htKJnF9rFRdrkmF4k7Xcju94wNpd9tYktSX/nU7hG0b14hC9wD4eG2ujW
+sFH8Y19n68/XzvG+drRu0hS7uei6L5AVYMFItStb/HW3suqlKxg0rGHa7rCD4sVjh0XsvC2OoLOs
+detlT7ti1Q6YiCC062QPxMI5+jJ2G94wbf152/gGd7ivw4HseBvM5O6YuVW0/+MHBSFOxCbWctgd
+MmZRapP46pR3G7gejSmb2gurGImIm0PNLPjBJkuwBoFAs3/7iVwvr5m9Vt6yPilcm4OSL63ybXEF
+5nq4uuLkrrX0n4ArmlrA3kSwK52vAcUZVydjkoqWE3SWdTlkLVuYy27mJ1NB7LI7/7LBFRAulVeb
+4jy7ecIGnmNP1SdhJWkZvIOMpEZjV4SWuu+gMBWETHen0VUnWtA7PZyqX41kQNPSkpilarIPtwXi
+kg6WeTimPyssUO+2maJVqIKxC2vFoBpxdFFGXBT8y2K+qvfU54bzi9knxDkXNpV9TMIpJ1jf0MqA
+mIgrAmdtS1FT5iHTccarK+YlyThmrzPRBzItCY+t7IMje4KrOy/zuEvtLpc6o+UFMbcpyrg/YheE
+o674h9lLVmCPsMqtlnE2YdnWbCaSvPteOcdDblAqPrh1rqbvUAfrV4mXsQ+oxSuM7zhtnFLc1OAd
+77bt+1QXX9ykObxeeq09ci/vsJ3Elm9WabnFJiuQ1TjZoocF4XEa5tSDxmY3I1Ne4/m1XWo4h93a
+4VZGt9fdaEZsLdPgPvek293vO2NcvKPdtL2zbZhy/3vib2bIxDmt8GvzouIlr7PkiR1pj1ebtie/
+ec533vOfB33oRT960pfe9GALCAA7
+
+------=_NextPart_000_0007_01CB88D2.24CFF7F0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.google.com/logos/Logo_25blk.gif
+
+R0lGODlhSwAgAPfVAA0KC0A9PwwLDQAAABcXGAkKDba4vODh4wACBVNdbBQdKQAJFF57nZzA64ij
+xGFsekRLVDJKZEdhfT1QZpzK/GyKqgAECBcuRgUKDylKalONxkx8rmCRwy1DWU1wlRgiLHiizgcI
+CU6q/Eub5jBhjy9chitUe1+y/x85Umu3/w4YIRkpOI/I/wAvVQArTgAWKR1aiyhxrDSIzkOr/3TB
+/wA1XQAZLAANFwtDbAo7XyCU6i6a7wYTHTai+E+x/wkNEJ7V/wBkqwBhowBNgQAyVQAxUgAoRQAm
+QAAjPAAWJgAGCgJUiwI+ZgY0VAEIDQcxTh6l/xZ2ug5IcgCe/wCV9ACO6gCE2AB7yQBxugBvtABo
+qgBalABQgwBIdQA6XwA0VgAsRwAgNQKZ+ANFcAVNfAAMEwei/gACAw47GBMpFxc+GxU7Fx5AHgcO
+B1CPUDhfOJXnlQIDAm6MbnKOcllvWQUGBSVOJD10PGvFapTnkpPmkZfrlpztm77/vXCMbgoTCWmA
+ZUpVRg0OC///U//1Cf/yONW/AHRoAEtEAjItAp2ODsOwFP7wb6+nXvTXAGRZACQgAVRLA15TBoV3
+Cx8cCHpvJV5WHo2DPObWaw0LAAcGADAsE9rLb/XomxIPAFNOOQQCAAsKCTctJOtVAM5LADUTAPtc
+AjwWASUNABoJAJs2AfVaB+xcFUkYAXwpAmgmB04eCHkwDrRKGZg9Ff9tK7U0AFQZAC8TB18nEDUO
+AAsDALBUM/99T9c3AIpAJ3I3JDUbElkuIPyEXI5OOWUWACkVD/aTdc5/aNmGb/+xmnlBMyscGFQ5
+MhwGAbJwY7qKgBoPDXZfXBIAAAUDAwkICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAANUALAAAAABLACAA
+AAj/AKsJHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3JhwAMeGcQIBepMRVIcSJUh48DChwEeE
+deb0cYMRgoYxSZRYWNBExoklCF4aDLTHzsUHI2wc1LIljtCCdPgYrQghBRKEPM48hSq1IigKQSJC
+WyaKGkJKm0SFQhgCVLUBGDwC2sOG4DSyAN5WM8DXwAEDBKvWeEhAGS5Yv5ANKyiqkqVIlTBdKvgB
+RQYQDTbgWFANEJy6Apn9wuXLmC+Pe/fyJehghxGHBI7lGphLmKyBARp5Gpho0KKBCUpYqJZkx5WB
+ntUIjLZr4C9hrgQCnk6Qgo7XDZ+pKjiLli2BnSQV/1RUSLwACkoFdoEyuJqfPGuqCUg2WyCwVdsV
+stBBpGGAZN8RBAwvtVQTCCOQFLSJb9UkkAJnAqnggxAC+aEHGtVEY4w01UATzCulMMRBD1xkJ0wr
+BgnTiwWNFJJgQYw4MoAHPqT3VgoUViPHhdU8I0wzt+Byi0MozGCFVgQN0IEHFVQw2DG8EGPQMb0A
+0GIiBnHiCDUXQFGiQAOc4IJAO2LoDC/1PYSADmJ0YVAZCFQgQgvVDMNLfgQhU+AlhTySpSECaUEF
+GAJFQMZAZVajDC/RRVTEFGIccRAD11WjCyujpFKQMVJSQgigMB4yUBFLSOAADATJAYdyzdBiCioS
+jewhxhQ5GETpmNW0YkqBAzFzm0CHECLqQJ8sMk1BEtDQnkBz0CWQK6aMMiSYDiGRhRkymHCBAgqg
+EMMSLwx0CimqnFJMMLHoQtAjhkySyCaWTCKIQSv4UAWhArmBxx1pCEQMKabs4ksssD6UhBdckIFD
+E2EMZ1ApsLRScEGaIBIJIi8OREAEGTwxhBVmMCHQH2388cdAmZxiiy2abiVRAhogoYRAN1wxhY0u
+bxQAEOES5ESbOX9UgQ8HySBy0BuRAAV2A9Uhww1Ib4QAFlRIwUMIP6wAQxhRf/SFEFHEAAMTUHdt
+9tlop6322hwFBAA7
+
+------=_NextPart_000_0007_01CB88D2.24CFF7F0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://archive.ics.uci.edu/ml/assets/MLimages/Large109.jpg
+
+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
+
+------=_NextPart_000_0007_01CB88D2.24CFF7F0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://archive.ics.uci.edu/ml/assets/rexa.jpg
+
+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
+jo8Ojo8Ojo8Ojo8Ojo8Ojo8Ojr//2Q==
+
+------=_NextPart_000_0007_01CB88D2.24CFF7F0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://archive.ics.uci.edu/ml/assets/nsfe.gif
+
+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
+yBwfiYoC5tTgvm8IAiAODwQAOw==
+
+------=_NextPart_000_0007_01CB88D2.24CFF7F0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://archive.ics.uci.edu/ml/assets/rexaSmall.jpg
+
+/9j/4AAQSkZJRgABAQEARwBHAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB
+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEB
+AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAfAIwDAREA
+AhEBAxEB/8QAHQAAAgICAwEAAAAAAAAAAAAABgkABwUIAwQKAv/EAC0QAAICAgIBBAICAgICAwAA
+AAQFAwYCBwEICQAREhQTFQoWIiMXIRgyM0FC/8QAHQEAAQUBAQEBAAAAAAAAAAAABQACAwQHBgEI
+Cf/EADgRAAICAQMDAgUDAwIEBwAAAAIDAQQFBhESABMhBxQVIiMxQQgyURZCYRckJTNSkRhDU3GB
+obH/2gAMAwEAAhEDEQA/AErdM+k22O9F32HRdS2jUtMK1ZrE3b93s+6rmVQaQmo652tQnMCbCMjf
+RjZiGNBpycjhxARgMCCpzY+I/jzkdKk2+xilGoJSqXsJx9tYqgoGZkuJbbSW/wCP536/WfWmtsVo
+Wlj7+Wq5a6GVyQYijVwtMb9515iW2AAa5PRyggUUDwk2EfEYCd+mT67/AI6/dzb689tqPeXQzaip
+UZivas9cdi3V2XLGGcXE+ADA6uayYiiG5Qc8TcCzS4T/AIcsZOY+MMseeSi9OXHRyRYoOGJ2klWJ
+ZET/ABMiuY36zTIfqM0RiWArK4PXeLa0O4peR08ikxgRPGTWFjJLIwgvEkMTG/jffrp7G/jz9zNO
+8Kudv9gfH/qjh7kTik52T2VaUfhzkFjhmZwqysmtV2LDITCTDMnEXmXKHHPHKTjHHn39eN07bRES
++zj0xO/Hu2ZXy2jeduS4ifHT8f8AqI0Xl+78JwGvsp2OMv8Ah2nFXezz34932+SZ2+XEuPLbfjO3
+26V93D6obL6PbeL0pt9xr+w2oai1PY0TfVtkLttOY1i7BGsK+UreHJ0MpmZAoE02XOAHAvMUg0wx
+JMM2OfoVbqNpP9u2Vkzis4lRcw2b+yYLYf8A8+3nrUtHatxmuMOObxCshXqldt4+U5SsFS6uzSMV
+vFqAc8QgDMdvqct4kTEZid2d2T+Pf3PT1KV1W9t9TtkX/jUYm8Quv1U2S+B3i71sYL+fh4jqtirI
+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
+
+------=_NextPart_000_0007_01CB88D2.24CFF7F0
+Content-Type: text/css;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://archive.ics.uci.edu/ml/assets/ml.css
+
+TEXTAREA {
+	WIDTH: 95%; HEIGHT: 49px; TEXT-ALIGN: left
+}
+.whitetext {
+	FONT-SIZE: 10pt; COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.whitetext A {
+	FONT-SIZE: 10pt; COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.whitetext A:visited {
+	FONT-SIZE: 10pt; COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.normal {
+	FONT-SIZE: 10pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.normal A {
+	FONT-SIZE: 10pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.normal A:visited {
+	FONT-SIZE: 10pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.heading {
+	FONT-SIZE: 20pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.heading A {
+	FONT-SIZE: 20pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.heading A:visited {
+	FONT-SIZE: 20pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.small-heading {
+	FONT-SIZE: 12pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.small-heading A {
+	FONT-SIZE: 12pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.small-heading A:visited {
+	FONT-SIZE: 12pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.big {
+	FONT-SIZE: 14pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.big A {
+	FONT-SIZE: 14pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.big A:visited {
+	FONT-SIZE: 14pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.almostbig {
+	FONT-SIZE: 12pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.almostbig A {
+	FONT-SIZE: 12pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.almostbig A:visited {
+	FONT-SIZE: 12pt; COLOR: #123654; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.bigwhite {
+	FONT-SIZE: 14pt; COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.bigwhite A {
+	FONT-SIZE: 14pt; COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.bigwhite A:visited {
+	FONT-SIZE: 14pt; COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+
+------=_NextPart_000_0007_01CB88D2.24CFF7F0--

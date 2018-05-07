@@ -1,3 +1,0 @@
-if ( exist ('startup.m', 'file') )
-  source ('startup.m')  # load startup.m like matlab
-endif
