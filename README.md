@@ -7,6 +7,9 @@
 
 * 1- 表示第一学期课程
 * 2- 表示第二学期课程
-* AI- 将人工智能相关单独区分
 * 0- 为其它
-* Paper 文件夹为毕业论文相关
+
+* AI- 将人工智能相关单独区分
+
+* [国科大iOS开发](https://github.com/uwuneng/swift_Lib)
+* [毕业论文相关](https://github.com/usiege/Thesis)
