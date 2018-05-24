@@ -1,5 +1,8 @@
 # Exercise
 
+<p align='center'>
+<img src='bg.png'>
+</p>
 
 ## 课程资源
 
